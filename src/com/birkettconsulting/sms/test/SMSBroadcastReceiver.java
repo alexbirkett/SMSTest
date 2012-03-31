@@ -74,7 +74,7 @@ public class SMSBroadcastReceiver extends BroadcastReceiver {
 
 		Notification notification = new Notification(R.drawable.ic_launcher,
 				message, System.currentTimeMillis());
-		
+		notification.flags = Notification.FLAG_AUTO_CANCEL;
 		PendingIntent contentIntent = PendingIntent.getActivity(context, 0,
 				getActivityIntent(context, message), PendingIntent.FLAG_UPDATE_CURRENT);
 
